@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-conversao
+spec:
+  selector:
+    matchLabels:
+      app: api-conversao
+  template:
+    metadata:
+      labels:
+        app:  api-conversao
+    spec:
+      containers:
+        - name: api-conversao
+          image: leandronowras/api-conversao
+          ports:
+            - containerPort: 8080
+
+
+
